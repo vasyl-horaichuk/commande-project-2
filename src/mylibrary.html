@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filmoteka</title>
+    <title>Filmoteka/ML</title>
     <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -11,12 +12,6 @@
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
 
@@ -26,8 +21,8 @@
         <use href="./sass/img/sprite.svg#icon-film-reel"></use>
       </svg>
     </div>
-
-    <header class="header header__img" id="header">
+    
+    <header class="header header-mylibrary__img" id="header">
       <div class="container">
         <div class="header__container">
           <div class="header__logo">
@@ -41,71 +36,52 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a
-                  href="./index.html"
-                  target="_self"
-                  class="menu__link menu__link--current"
+                <a href="./index.html" target="_self" class="menu__link"
                   >HOME</a
                 >
               </li>
               <li class="menu__item">
-                <a href="./mylibrary.html" class="menu__link">MY LIBRARY</a>
+                <a target="/mylibrary" class="menu__link menu__link--current"
+                  >MY LIBRARY</a
+                >
               </li>
             </ul>
           </nav>
         </div>
-        <form
-          class="form js-search-form"
-          name="search-form"
-          autocomplete="off"
-          novalidate
-        >
-          <div class="form__box">
-            <input
-              class="form__input js-search-input"
-              type="text"
-              name="search_user"
-              placeholder="Movie search"
-              id="search"
-            />
-            <button class="form__btn" aria-label="movie-search" type="submit">
-              <svg class="form__icon" width="12" height="12">
-                <use
-                  class="form__svg"
-                  href="./sass/img/sprite.svg#icon-search"
-                ></use>
-              </svg>
-            </button>
-          </div>
-        </form>
-        <span class="form__text-error visually-hidden js-search-error"
-          >Search result not successful. Enter the correct movie name.
-        </span>
+        <div class="btn">
+          <button class="button button__watched">WATCHED</button>
+          <button class="button button__queue btn__current">QUEUE</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <!-- added loader markup to section-->
-      <div class="loader-container loader-container__is-hidden">
-        <div class="loader-container__spinner"></div>
-      </div>
-      <section class="film-colection">
-        <div class="container">
-          <div class="js-error-message"></div>
-          <ul class="film-colection__list js-films-list"></ul>
-          <div class="pagination js-pagination"></div>
-        </div>
-      </section>
+        <section class="film-colection">
+            <div class="container js-library-container">
+                <div class="library-message">
+                </div>
+                <ul class="film-colection__list js-library-films__list">
+                </ul>
+                <div class=" pagination js-pagination"></div>
+            </div>
+        </section>
+
       <button class="btn-up button btn-up_hide">
         <svg class="btn-up__icon">
           <use class="btn-up__path" href="./sass/img/sprite.svg#circle-up"></use>
         </svg>
       </button>
+
     </main>
 
     <include src="./partials/mw-movie.html"></include>
     <include src="./partials/footer.html"></include>
     <include src="./partials/mw-footer.html"></include>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/mylibrary.js"></script>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
   </body>
 </html>

@@ -1,2 +1,27 @@
-@import './common';
-@import './example';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+@import './base/common';
+@import './base/container';
+
+
+@import './layout/film-colection';
+@import './components/form';
+@import './components/menu';
+@import './components/logo';
+@import './components/backdrop';
+@import './components/button';
+@import './components/active-button';
+@import './components/mdl-btn';
+@import './components/mw-movie';
+@import './components/trailer';
+@import './components/pagination';
+@import './components/library-message';
+@import './components/loader';
+
+
+
+@import './layout/header-mylibrary';
+@import './layout/header';
+@import './layout/gallery';
+@import './layout/footer';
