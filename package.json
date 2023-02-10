@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://AndriiSolodaiev/JS-command-project",
+  "homepage": "https://vasyl-horaichuk/commande-project-2",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /JS-command-project/"
+    "build": "parcel build src/*.html --public-url /commande-project-2/"
   },
   "repository": {
     "type": "git",
