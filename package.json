@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://vasyl-horaichuk.github.io/commande-project-2",
+  "homepage": "https://AndriiSolodaiev/JS-command-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /commande-project-2/"
+    "build": "parcel build src/*.html --public-url /JS-command-project/"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,18 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "axios": "^1.2.3",
+    "basiclightbox": "^5.0.4",
+    "buffer": "^5.5.0",
+    "lodash": "^4.17.21",
+    "lodash.throttle": "^4.1.1",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.0",
     "@parcel/transformer-sass": "^2.6.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4"
